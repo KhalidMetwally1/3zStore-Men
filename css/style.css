@@ -1,0 +1,815 @@
+:root{
+    --offers-color: rgb(154, 71, 3);
+    --wrapper-description: #bab8bc;
+    --wrapper-secondary: #f4f3f4;
+    --wrapper-special: #fa9434;
+    --common-padding: 7%;
+}
+body{
+    background-image: url('../images/3433814.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    outline: 0;
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none !important;
+    color: #000;
+}
+/* start preloader */
+/* end preloader */
+/* start hero-header */
+  .hero-header{
+      position: static;
+      z-index: 999;
+  }
+  .hero-header li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-header a, #offers-icon{
+      display: inline-block;
+      text-decoration: none !important;
+      color: black;
+      font-weight: 700;
+      font-size: 115%;
+      position: relative;
+      animation: slideTop 0.5s ease forwards;
+      opacity: 0;
+      animation-delay: calc(0.2s * var(--i));
+  }
+
+  .hero-header a::after {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: black;
+      left: 0;
+      bottom: -6px;
+      border-radius: 3px;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.5s;
+  }
+  .hero-header .offers::after{
+      background-color: var(--offers-color);
+  }
+  .hero-header a:hover::after{
+      transform-origin: left;
+      transform: scaleX(1);
+  }
+  .nav-names .offers{
+      color: var(--offers-color);
+  }
+  .nav-names .offers{
+  width: 5rem;
+  }
+  .men-hero .logo{
+    width: 71px;
+    margin: 17px 0 17px 20px !important;
+    animation: slideRight 0.5s linear forwards;
+    opacity: 0;
+  }
+/* end hero-header */
+/* start men-hero main */
+  .men-hero{
+      height: 100vh;
+      width: 100%;
+      background-image: url('../images/Fasion-wallpapers/wallpaperflare.com_wallpaper\ \(9\).jpg');
+      background-repeat: no-repeat;
+      background-size: 150vh;  /* 85% */
+  }
+  @media (max-width: 1280px){
+    .men-hero{
+      background-position-x: center;
+    }
+    .men-hero .titleText{
+      font-size: 2.5em;
+    }
+  }
+  @media (max-width: 790px){
+    .men-hero{
+      background-position-x: center;
+    }
+    .men-hero .titleText{
+      font-size: 2em;
+    }
+  }
+  .men-main{
+      background: url('../images/decorations/dots1.png') no-repeat 98% 5% , url('../images/decorations/dots2.png') no-repeat  60% 95%;
+      background-size: 60px,90px;
+      position: relative;
+  }
+  .overlay{
+      height: 100%;
+      background: linear-gradient(95deg, rgba(255, 255, 255, 0.669) 5%, transparent 40%, #fff 60%);
+  }
+  .titleText{
+    display: inline-block;
+      font-weight: 800;
+      font-size: 3em;
+      position: relative;
+      animation: slideRight 0.5s ease forwards;
+      opacity: 0;
+      animation-delay: 0.7s;
+
+  }
+  .call-to-action{
+      color: #fff;
+      background-color: black;
+      padding: 10px 30px !important;
+      animation: slideLeft 0.5s ease forwards;
+      opacity: 0;
+      animation-delay: 0.7s;
+  }
+  .call-to-action{
+    font-weight: 700;
+    border: 3px solid #000;
+    transition: 0.5s;
+  }
+  .call-to-action:hover{
+    border: 3px solid #000;
+    background: transparent;
+    color: #000;
+  }
+  .titleText h1{
+      font-family: 'Cairo', sans-serif;
+      font-weight: 800;
+      font-size: 1em;
+
+  }
+  .titleText p{
+      text-align: right;
+      margin-top: 1rem !important;
+  }
+  .arrow{
+    position: absolute;
+    width: 100px;
+    bottom: 80px;
+    animation: slideRight 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.7s;
+  }
+/* end men-hero */
+/* start sticky navbar */
+@media (max-width:776px) {
+  .navBar ul li a{
+    display: none;
+  }
+  .navBar ul li img{
+    display: inline-block;
+  }
+  .navBar{
+    height: 70px;
+  }
+}
+  header .navBar{
+      position: sticky;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.518), 10px 0 10px #fff;
+  }
+  header .navBar .home-icon{
+      position: absolute;
+      left: 0;
+      margin-left: 20px !important;
+      font-size: 1.5em;
+      background: linear-gradient(to right, rgb(94, 42, 0) 21%, #000 69%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      transition: 0.5s;
+  }
+  header .navBar .home-icon:hover{
+      background: linear-gradient(to left, rgb(94, 42, 0) 21%, #000 69%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;   
+  }
+  header .navBar .bag-icon{
+      position: absolute;
+      right: 0;
+      margin-right: 20px !important;
+      font-size: 1.5em;
+      background: linear-gradient(to left, rgb(94, 42, 0) 21%, #000 69%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      transition: 1s;
+  }
+  header .navBar .bag-icon:hover{
+      background: linear-gradient(to right, rgb(94, 42, 0) 21%, #000 69%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;   
+  }
+  header .navBar ul{
+    padding: 0;
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0 !important;
+  }
+  header .navBar .active::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    left: 0;
+    bottom: -17px;
+    box-shadow: 0px 4px 6px #000;
+  }
+  header .navBar ul .left-side{
+    position: relative;
+    display: block;
+    font-weight: 800;
+    background: linear-gradient(to right, rgb(94, 42, 0) 31%, #000 69%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  header .navBar ul .right-side{
+      position: relative;
+      display: block;
+      font-weight: 800;
+      background: linear-gradient(to left, rgb(94, 42, 0) 31%, #000 69%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+  }
+  header .navBar ul .left-side::after,
+  header .navBar ul .right-side::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    left: 0;
+    bottom: -17px;
+    box-shadow: 0px 3px 5px #000;
+    transform: scaleX(0);
+    transition: 0.5s;
+  }
+  header .navBar ul .left-side:hover::after,
+  header .navBar ul .right-side:hover::after{
+    transform-origin: center;
+    transform: scaleX(1);
+  }
+  header .navBar ul li{
+    padding: 15px 0;
+    transition: 0.5s;
+  }
+/* End sticky navbar */
+/* start text titles */
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.title .shopTitle{
+  padding: 6px 0;
+  direction: rtl;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5em;
+  background: linear-gradient(to right, rgb(94, 42, 0), #000 70%, rgb(94, 42, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* animation: textRadiation 2s ease-in-out infinite alternate ; */
+
+}
+.title img{
+  scale: 0.8;
+  animation: imgRadiation 2s ease-in-out infinite alternate ;
+}
+@keyframes textRadiation {
+  0%{
+    scale: 1;
+  }
+  100%{
+    scale: 1.05;
+    text-shadow: 0 0 3px rgba(154, 71, 3,0.2);
+  }
+}
+@keyframes imgRadiation {
+  0%{
+    scale: 0.8;
+  }
+  100%{
+    scale: 0.85;
+    -webkit-filter: drop-shadow(0px 0px 3px rgba(53, 24, 0, 0.7));
+    filter: drop-shadow(0px 0px 3px rgba(53, 24, 0, 0.7));
+  }
+}
+/* end text titles */
+/* Start shop by cloth type  */
+.by-cloth-type{
+    padding-top: var(--common-padding);
+    background-size: cover;
+    position: relative;
+}
+.card {
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position-x: 40%;
+        position: relative;
+        padding: 1.8rem;
+        border: 2px solid #c3c6ce;
+        transition: 0.5s ease-out;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .first-card{
+        background-image: url('../images/Fasion-wallpapers/shoes/wallpaperflare.com_wallpape2r.jpg');
+    }
+    .second-card{
+        background-image: url('../images/Fasion-wallpapers/shoes/wallpaperflare.com_wallpaper.jpg');
+    }
+    .third-card{
+        background-image: url('../images/Fasion-wallpapers/shoes/wallpaperflare.com_wallpaper\ \(12\).jpg');
+    } 
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-image: linear-gradient(to left, rgb(94, 42, 0) 5%, #000 69%);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.6rem 1rem !important;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    font-weight: 600;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: rgb(94, 42, 0);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 20px #000;
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+/* [BREAK POINTS] */
+  @media (max-width: 1050px){
+    .by-cloth-type .card{
+      height: 300px;
+    }
+  }   
+  @media (max-width: 992px){
+    .by-cloth-type .clothesRow{
+      width: 90% !important;
+    }
+  }
+  @media (max-width: 768px){
+    .by-cloth-type .clothesRow .container{
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 620px){
+    .by-cloth-type .row{
+      max-width: 80%;
+      height: 1000px;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .by-cloth-type .col-4{
+      width: 100%;
+    }
+  }
+    
+
+/* End shop by cloth type  */
+/* Start shop by sport type  */
+.by-sport-type{
+  padding-top: var(--common-padding);
+  position: relative;
+}
+.sports-list .wrapper{
+    background-color: #f4f3f4;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 500px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 0.5s;
+    position: relative;
+}
+.sports-list .wrapper .sport-name{
+    color: #000;
+    font-weight: 700;
+    font-size: 3em;
+}
+.sports-list .wrapper p{
+    color: var(--wrapper-description);
+    font-size: 1em;
+    font-weight: 600;
+}
+.sports-list .special-wrapper{
+    background-color:var(--wrapper-special);
+}
+.sports-list .special-wrapper .sport-name{
+    color: #fdfdfd;
+    font-weight: 700;
+    font-size: 3em;
+}
+.sports-list .special-wrapper p{
+    color: var(--wrapper-secondary);
+    font-weight: 600;
+    font-size: 1em;
+}
+.sports-list .wrapper:hover{
+    box-shadow: 0 0 8px #00000067;
+}
+.sports-list .special-wrapper:hover{
+    box-shadow: 0 0 10px var(--wrapper-special);
+}
+.img-area{
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.football-btn{
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    border-radius: 30px;
+}
+.swimming-btn{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    border-radius: 30px;
+    background-color: #fa9434;
+    border-color: #fa9434
+}
+.swimming-btn:hover{
+    border: 3px solid var(--wrapper-special);
+    background: transparent;
+    background-color: transparent;
+    color: var(--wrapper-special);
+}
+.basketball-btn{
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    border-radius: 30px;
+    background-color: #fa9434;
+    border-color: #fa9434
+}
+.basketball-btn:hover{
+    border: 3px solid var(--wrapper-special);
+    background: transparent;
+    background-color: transparent;
+    color: var(--wrapper-special);
+}
+.football-img{
+    background: url('../images/decorations/football.png') no-repeat right;
+    background-size: 50%;
+}
+.basketball-img{
+    background: url('../images/decorations/ball.png') no-repeat right;
+    background-size: 60%;
+}
+.swimming-img{
+    background: url('../images/decorations/swimming.png') no-repeat right;
+    background-size: 45%;
+}
+/* [BREAK POINTS] */
+@media (max-width: 992px){
+  .sports-list .container{
+    max-width: 900px;
+  }
+  .sports-list .call-to-action{
+    font-size: 1em;
+  }
+  .sports-list .football-img {
+    background-size: 60%;
+  }
+  .sports-list .swimming-img {
+    background-size: 65%;
+  }
+  .swimming-btn{
+    bottom: -39px;
+  }
+  .sports-list .wrapper .sport-name {
+    font-size: 2em;
+  }
+  .sports-list .basketball-img {
+    background-size: 80%;
+  }
+}
+@media (max-width: 763px){
+  .sports-list .call-to-action{
+    display: none;
+  }
+  .sports-list .wrapper{
+    cursor: pointer;
+  }
+  .sports-list .football-img {
+    background-size: 80%;
+  }
+  .sports-list .swimming-img {
+    background-size: 85%;
+  }
+  .sports-list .basketball-img {
+    background-size: 100%;
+  }
+}
+  
+/* End shop by sport type  */
+/* Start Best items */
+#bestItems{
+  padding-top: var(--common-padding);
+}
+#bestItems .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  #bestItems .wrapper i {
+    z-index: 55;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  #bestItems .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  #bestItems .wrapper i:first-child{
+    left: -22px;
+  }
+  #bestItems .wrapper i:last-child{
+    right: -22px;
+  }
+  #bestItems .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none;
+  }
+  #bestItems .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  #bestItems .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  #bestItems .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  #bestItems .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  #bestItems .carousel .card {
+    margin: 20px 0;
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: url('../images/Fasion-wallpapers/wallpaperflare.com_wallpa4per\ \(1\).jpg') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  #bestItems .carousel .card:hover{
+    box-shadow: 2px 2px 5px rgba(80, 79, 79, 0.477) !important;
+  }
+  @media screen and (max-width: 900px) {
+    #bestItems .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2));
+    }
+  }
+  @media screen and (max-width: 600px) {
+    #bestItems .wrapper .carousel {
+      grid-auto-columns: 107%;
+    }
+  }
+/*[OLD CARD]
+    .slider-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: #bab8bc;
+    padding: 40px;
+}
+    .slider-card {
+    box-sizing: border-box;
+    width: 190px;
+    height: 254px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  .slider-card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .slider-card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  } */
+/* End Best items */
+/* Start Footer  */
+.ftco-footer {
+    font-size: 16px;
+    background: linear-gradient(175deg, black 70%, rgba(53, 24, 0, 1));
+    padding: 5em 0 0 0;
+    z-index: 0;
+    position: relative;
+    z-index: 0; }
+    @media (max-width: 991.98px) {
+      .ftco-footer .ftco-footer-widget {
+        margin-bottom: 40px; } }
+    .ftco-footer .ftco-footer-widget ul {
+      margin: 0;
+      padding: 0; }
+      .ftco-footer .ftco-footer-widget ul li {
+        margin-bottom: 10px;
+        color: rgba(255, 255, 255, 0.5); }
+        .ftco-footer .ftco-footer-widget ul li a {
+          color: rgba(255, 255, 255, 0.5); }
+          .ftco-footer .ftco-footer-widget ul li a span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px; }
+          .ftco-footer .ftco-footer-widget ul li a:hover {
+            color: #fc5e28; }
+    
+    .ftco-footer p {
+      color: rgba(255, 255, 255, 0.5); }
+    .ftco-footer .ftco-heading-2 {
+      font-family: 'Cairo', sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      letter-spacing: 2px; }
+    .ftco-footer .logo a {
+      color: #fc5e28; }
+      .ftco-footer .logo a span.flaticon {
+        font-size: 24px;
+        line-height: 1; }
+    .ftco-footer .bg-primary {
+      background: #030918 !important;
+      position: relative;
+      z-index: 0;
+      overflow: hidden; }
+      .ftco-footer .bg-primary p {
+        color: rgba(255, 255, 255, 0.7); }
+        .ftco-footer .bg-primary p a {
+          color: #fff;
+          text-decoration: underline; }
+
+  .ftco-footer-social li {
+    list-style: none;
+    margin: 0 10px 0 0;
+    display: inline-block; }
+    .ftco-footer-social li a {
+      height: 40px;
+      width: 40px;
+      display: block;
+      background: rgba(255, 255, 255, 0.08);
+      position: relative;
+      border-radius: 50%; }
+      .ftco-footer-social li a span {
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: #fff !important; }
+      .ftco-footer-social li a:hover {
+        background: #fc5e28;}
+/* End Footer  */
+/* START KEYFRAMES ANIMATION */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes horizMove {
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* END KEYFRAMES ANIMATION */
